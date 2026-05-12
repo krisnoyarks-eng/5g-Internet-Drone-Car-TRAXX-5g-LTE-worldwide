@@ -1,0 +1,411 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2869
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\froman\fcharset0 Times-Bold;\f1\froman\fcharset0 Times-Roman;\f2\fmodern\fcharset0 Courier;
+}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red109\green109\blue109;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c50196\c50196\c50196;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}}{\leveltext\leveltemplateid1\'01\'00;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}}{\leveltext\leveltemplateid101\'01\'00;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid2}
+{\list\listtemplateid3\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}}{\leveltext\leveltemplateid201\'01\'00;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid3}
+{\list\listtemplateid4\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}}{\leveltext\leveltemplateid301\'01\'00;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid4}
+{\list\listtemplateid5\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}}{\leveltext\leveltemplateid401\'01\'00;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid5}
+{\list\listtemplateid6\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}}{\leveltext\leveltemplateid501\'01\'00;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid6}
+{\list\listtemplateid7\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}}{\leveltext\leveltemplateid601\'01\'00;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid7}
+{\list\listtemplateid8\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}}{\leveltext\leveltemplateid701\'01\'00;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid8}
+{\list\listtemplateid9\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}}{\leveltext\leveltemplateid801\'01\'00;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid9}
+{\list\listtemplateid10\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}}{\leveltext\leveltemplateid901\'01\'00;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid10}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}{\listoverride\listid4\listoverridecount0\ls4}{\listoverride\listid5\listoverridecount0\ls5}{\listoverride\listid6\listoverridecount0\ls6}{\listoverride\listid7\listoverridecount0\ls7}{\listoverride\listid8\listoverridecount0\ls8}{\listoverride\listid9\listoverridecount0\ls9}{\listoverride\listid10\listoverridecount0\ls10}}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sa280\partightenfactor0
+
+\f0\b\fs28 \cf0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 DRONE OS: SOURCE CODE & ARCHITECTURE MANUAL (REVISED V2.0)\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 This document provides a comprehensive technical breakdown of the upgraded multi-threaded robotics operating system. Version 2.0 introduces 
+\f0\b Microcontroller Port-Binding
+\f1\b0 , 
+\f0\b Unified Apache Proxying
+\f1\b0 , 
+\f0\b Fleet Tunneling (FRP)
+\f1\b0 , and 
+\f0\b Integrated Audio/Bluetooth
+\f1\b0  routing.\
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3 \
+\pard\pardeftab720\sa319\partightenfactor0
+
+\f0\b \cf0 \strokec2 MODULE 1: SYSTEM BOOTSTRAPPING & DEPENDENCIES\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0 \cf0 The Linux kernel is stripped of conflicting desktop services and optimized for headless serial communication. 
+\f0\b The Code Snippet:
+\f1\b0 \
+\pard\pardeftab720\partightenfactor0
+\cf0 Bash\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs26 \cf0 sudo DEBIAN_FRONTEND=noninteractive apt-get purge -y modemmanager brltty\
+sudo DEBIAN_FRONTEND=noninteractive apt-get install -y python3-flask python3-serial ffmpeg psmisc apache2 network-manager pulseaudio pulseaudio-module-bluetooth alsa-utils\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0\b\fs24 \cf0 What it does and Why:
+\f1\b0 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa240\partightenfactor0
+\ls1\ilvl0
+\f0\b \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	1	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Serial Hijacker Removal:
+\f1\b0  Purging 
+\f2\fs26 modemmanager
+\f1\fs24  and 
+\f2\fs26 brltty
+\f1\fs24  is critical. These services scan 
+\f2\fs26 /dev/ttyUSB
+\f1\fs24  ports for modems/braille displays, which causes "Port Busy" errors when the 
+\f2\fs26 pilot.py
+\f1\fs24  script attempts to talk to the Arduinos.\
+\ls1\ilvl0
+\f0\b \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	2	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Audio Subsystem:
+\f1\b0  New in V2.0 is the inclusion of 
+\f2\fs26 pulseaudio
+\f1\fs24  and 
+\f2\fs26 bluetooth
+\f1\fs24  modules. This allows the drone to act as a mobile sound station, routing TTS (Text-to-Speech) and MP3 horns through external Bluetooth speakers.\
+\ls1\ilvl0
+\f0\b \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	3	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Dependency Locking:
+\f1\b0  
+\f2\fs26 libv4l-dev
+\f1\fs24  and 
+\f2\fs26 v4l-utils
+\f1\fs24  are installed to allow low-level control over camera parameters (exposure, brightness) via the Python backend.\
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3 \
+\pard\pardeftab720\sa319\partightenfactor0
+
+\f0\b \cf0 \strokec2 MODULE 2: UNIFIED REVERSE PROXY (APACHE)\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0 \cf0 V2.0 utilizes a more complex routing map to handle the "Master UI," the "Steer Node," the "Drive Node," and the "A/V Stream" through a single Port 80. 
+\f0\b The Code Snippet:
+\f1\b0 \
+\pard\pardeftab720\partightenfactor0
+\cf0 Apache\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs26 \cf0 <VirtualHost *:80>\
+    ProxyPass /steer/ http://127.0.0.1:8082/\
+    ProxyPass /drive/ http://127.0.0.1:8080/\
+    ProxyPass /cam/ http://127.0.0.1:8889/cam/ flushpackets=on\
+    ProxyPass /audio/ http://127.0.0.1:8890/audio/ flushpackets=on\
+    ProxyPass / http://127.0.0.1:8000/\
+</VirtualHost>\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0\b\fs24 \cf0 What it does and Why:
+\f1\b0 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa240\partightenfactor0
+\ls2\ilvl0
+\f0\b \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	1	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Port Consolidation:
+\f1\b0  The browser only connects to the Pi's IP on Port 80. Apache handles the internal "wiring." For example, commands sent to 
+\f2\fs26 /steer/
+\f1\fs24  are rerouted to the ESP8266 controller logic on Port 8082.\
+\ls2\ilvl0
+\f0\b \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	2	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Streaming Latency:
+\f1\b0  
+\f2\fs26 flushpackets=on
+\f1\fs24  is applied to both 
+\f2\fs26 /cam/
+\f1\fs24  and 
+\f2\fs26 /audio/
+\f1\fs24 . This prevents Apache from "batching" data, ensuring that video frames and microphone audio are pushed to the driver's phone with sub-100ms latency.\
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3 \
+\pard\pardeftab720\sa319\partightenfactor0
+
+\f0\b \cf0 \strokec2 MODULE 3: DUAL-FEED MEDIA ENGINE (camera.py & audio.py)\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0 \cf0 Unlike older versions, V2.0 separates audio and video into independent Flask processes to prevent audio buffering from lagging the video feed. 
+\f0\b The Code Snippet:
+\f1\b0 \
+\pard\pardeftab720\partightenfactor0
+\cf0 Python\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs26 \cf0 # Video Capture\
+cmd = ['ffmpeg', '-f', 'v4l2', '-input_format', 'mjpeg', '-video_size', '640x480', '-framerate', '30', '-i', '/dev/video0', '-c:v', 'copy', '-f', 'mjpeg', '-']\
+\
+# Audio Capture\
+cmd = ['ffmpeg', '-f', 'alsa', '-ac', '1', '-ar', '44100', '-i', mic, '-c:a', 'libmp3lame', '-b:a', '64k', '-f', 'mp3', '-']\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0\b\fs24 \cf0 What it does and Why:
+\f1\b0 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa240\partightenfactor0
+\ls3\ilvl0
+\f0\b \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	1	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Direct HW Passthrough:
+\f1\b0  By using 
+\f2\fs26 -c:v copy
+\f1\fs24 , the Pi doesn't waste CPU re-encoding video. It takes the MJPEG frames directly from the Logitech C930e hardware.\
+\ls3\ilvl0
+\f0\b \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	2	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 MP3 Audio Compression:
+\f1\b0  The microphone feed is encoded on-the-fly to a 64k MP3 stream. This allows the driver to hear high-quality ambient sound without saturating the Wi-Fi bandwidth.\
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3 \
+\pard\pardeftab720\sa319\partightenfactor0
+
+\f0\b \cf0 \strokec2 MODULE 4: INTELLIGENT USB BINDING & HANDSHAKING\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0 \cf0 To solve the "shifting USB port" problem, the system now uses a 
+\f2\fs26 PING_ID
+\f1\fs24  protocol to identify microcontrollers regardless of which physical port they are plugged into. 
+\f0\b The Code Snippet:
+\f1\b0 \
+\pard\pardeftab720\partightenfactor0
+\cf0 Python\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs26 \cf0 def detect_usb_devices():\
+    # ... loops through ports ...\
+    temp_ser.write(b"\\nPING_ID\\n")\
+    chunk = temp_ser.read_all().decode('utf-8', errors='ignore')\
+    if "DRIVE" in chunk: \
+        ser_drive[0] = temp_ser\
+    elif "STEER" in chunk: \
+        ser_steer[0] = temp_ser\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0\b\fs24 \cf0 What it does and Why:
+\f1\b0 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa240\partightenfactor0
+\ls4\ilvl0
+\f0\b \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	1	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Cold Boot Resilience:
+\f1\b0  On startup, the Pi pings every serial device. The Arduino Uno is programmed to reply "DRIVE" and the ESP8266 replies "STEER."\
+\ls4\ilvl0
+\f0\b \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	2	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Auto-Recovery:
+\f1\b0  If a cable vibrates loose and is plugged back into a different port, the 
+\f2\fs26 hw_monitor
+\f1\fs24  thread detects the change and re-binds the serial connection automatically.\
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3 \
+\pard\pardeftab720\sa319\partightenfactor0
+
+\f0\b \cf0 \strokec2 MODULE 5: THE SMART BATTERY RATCHET (pilot.py)\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0 \cf0 Battery monitoring in robotics is often inaccurate due to "Voltage Sag." V2.0 implements a one-way "Ratchet" filter to provide a stable percentage. 
+\f0\b The Code Snippet:
+\f1\b0 \
+\pard\pardeftab720\partightenfactor0
+\cf0 Python\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs26 \cf0 # Battery Sag Correction Logic\
+sag_v = (a_raw / b_count) * 0.015 \
+corrected_v = v_raw + sag_v\
+# One-Way Ratchet\
+if current_pct == -1: current_pct = calc_pct\
+elif calc_pct < current_pct: current_pct = calc_pct\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0\b\fs24 \cf0 What it does and Why:
+\f1\b0 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa240\partightenfactor0
+\ls5\ilvl0
+\f0\b \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	1	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Sag Math:
+\f1\b0  When motors draw high Amps, battery voltage drops temporarily. The script calculates this drop (
+\f2\fs26 sag_v
+\f1\fs24 ) and adds it back to the reading so the gauge doesn't "lie" during hard acceleration.\
+\ls5\ilvl0
+\f0\b \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	2	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 The Ratchet:
+\f1\b0  The battery percentage can only stay the same or go down. This prevents the "ghost recharge" effect where the battery appears to gain energy when the motors stop.\
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3 \
+\pard\pardeftab720\sa319\partightenfactor0
+
+\f0\b \cf0 \strokec2 MODULE 6: FLEET TUNNELING & FRP (frp_link.sh)\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0 \cf0 V2.0 replaces random Ngrok URLs with a permanent "Fleet Tunnel" using FRP (Fast Reverse Proxy). 
+\f0\b The Code Snippet:
+\f1\b0 \
+\pard\pardeftab720\partightenfactor0
+\cf0 Ini, TOML\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs26 \cf0 [drone_fleet_8585]\
+type = tcp\
+local_ip = 127.0.0.1\
+local_port = 80\
+remote_port = 8585\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0\b\fs24 \cf0 What it does and Why:
+\f1\b0 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa240\partightenfactor0
+\ls6\ilvl0
+\f0\b \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	1	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Persistent Access:
+\f1\b0  The drone connects to a central "Fleet Server." The driver can access the drone from anywhere in the world by going to 
+\f2\fs26 http://server_ip:8585
+\f1\fs24 .\
+\ls6\ilvl0
+\f0\b \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	2	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Low Overhead:
+\f1\b0  FRP is written in Go and uses significantly less RAM than SSH-based tunnels, making it ideal for the Raspberry Pi's resource-constrained environment.\
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3 \
+\pard\pardeftab720\sa319\partightenfactor0
+
+\f0\b \cf0 \strokec2 MODULE 7: INTERACTIVE TERMINAL & OTA UPDATING\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0 \cf0 The web UI now includes a root-level terminal, allowing for "Over-The-Air" (OTA) firmware updates without needing a physical keyboard. 
+\f0\b The Code Snippet:
+\f1\b0 \
+\pard\pardeftab720\partightenfactor0
+\cf0 Python\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs26 \cf0 @app.route('/api/terminal', methods=['POST'])\
+def run_terminal_cmd():\
+    cmd = request.json.get('cmd', '')\
+    result = subprocess.run(cmd, shell=True, capture_output=True, text=True, timeout=15)\
+    return jsonify(\{'output': result.stdout + result.stderr\})\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0\b\fs24 \cf0 What it does and Why:
+\f1\b0 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa240\partightenfactor0
+\ls7\ilvl0
+\f0\b \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	1	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Stateless Command Execution:
+\f1\b0  The UI can push updates, check logs, or reboot the Pi via the browser.\
+\ls7\ilvl0
+\f0\b \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	2	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Security:
+\f1\b0  Commands are piped through a 15-second timeout to prevent "hanging" the Pi if a command waits for user input that will never come.\
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3 \
+\pard\pardeftab720\sa319\partightenfactor0
+
+\f0\b \cf0 \strokec2 MODULE 8: OFFLINE RECOVERY (SURVIVAL AP)\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0 \cf0 A robust failsafe ensures that if the drone loses its home Wi-Fi connection, it creates its own network for emergency recovery. 
+\f0\b The Code Snippet:
+\f1\b0 \
+\pard\pardeftab720\partightenfactor0
+\cf0 Bash\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs26 \cf0 # drone_ap.sh\
+if nmcli dev wifi rescan && nmcli -t -f DEVICE,STATE dev | grep -q "^wlan0:connected"; then\
+    exit 0\
+else\
+    nmcli dev wifi hotspot ifname wlan0 ssid DRONE_SETUP password "drone1234"\
+fi\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0\b\fs24 \cf0 What it does and Why:
+\f1\b0 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa240\partightenfactor0
+\ls8\ilvl0
+\f0\b \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	1	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Heuristic Connectivity:
+\f1\b0  It waits 30 seconds to find a router. If it fails, it assumes "Field Mode" and becomes a router itself.\
+\ls8\ilvl0
+\f0\b \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	2	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Setup SSID:
+\f1\b0  The 
+\f2\fs26 DRONE_SETUP
+\f1\fs24  network allows the user to log in and reconfigure the Wi-Fi credentials via the HUD interface.\
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3 \
+\pard\pardeftab720\sa319\partightenfactor0
+
+\f0\b \cf0 \strokec2 MODULE 9: SYSTEM PRIVILEGE & PERFORMANCE\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0 \cf0 V2.0 implements "Target Isolation" to maximize CPU efficiency. 
+\f0\b The Code Snippet:
+\f1\b0 \
+\pard\pardeftab720\partightenfactor0
+\cf0 Bash\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs26 \cf0 sudo systemctl set-default multi-user.target\
+sudo fallocate -l 12G /swapfile\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0\b\fs24 \cf0 What it does and Why:
+\f1\b0 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa240\partightenfactor0
+\ls9\ilvl0
+\f0\b \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	1	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Headless Mode:
+\f1\b0  
+\f2\fs26 multi-user.target
+\f1\fs24  disables the graphical desktop. This frees up ~400MB of RAM and reduces CPU temperature by disabling the GPU-heavy window manager.\
+\ls9\ilvl0
+\f0\b \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	2	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Swap Optimization:
+\f1\b0  By creating a 12GB swapfile on the SD card, the drone can handle massive background processes (like simultaneous A/V encoding and FRP tunneling) without crashing due to "Out of Memory" (OOM) errors.\
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3 \
+\pard\pardeftab720\sa319\partightenfactor0
+
+\f0\b \cf0 \strokec2 MODULE 10: USER SAFETY & THE "DEAD-MAN'S SWITCH"\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0 \cf0 The HUD includes a browser-level failsafe to prevent the drone from driving away if the network lags. 
+\f0\b The Code Snippet:
+\f1\b0 \
+\pard\pardeftab720\partightenfactor0
+\cf0 JavaScript\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs26 \cf0 // hud.html\
+ontouchend="resetDrive()" \
+onmouseleave="resetDrive()"\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0\b\fs24 \cf0 What it does and Why:
+\f1\b0 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa240\partightenfactor0
+\ls10\ilvl0
+\f0\b \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	1	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Automatic Braking:
+\f1\b0  If the user\'92s finger slips off the screen or the browser window loses focus, the 
+\f2\fs26 resetDrive()
+\f1\fs24  function is triggered.\
+\ls10\ilvl0
+\f0\b \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	2	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Command Neutralization:
+\f1\b0  This immediately sends 
+\f2\fs26 a0
+\f1\fs24  (Forward 0) and 
+\f2\fs26 s0
+\f1\fs24  (Brake) to the Arduino, ensuring the vehicle stops even if the driver is distracted.\
+}

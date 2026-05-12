@@ -1,0 +1,229 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2869
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fswiss\fcharset0 Helvetica-Bold;\f2\fswiss\fcharset0 Helvetica-Oblique;
+}
+{\colortbl;\red255\green255\blue255;\red109\green109\blue109;\red24\green24\blue24;\red52\green55\blue54;
+\red228\green234\blue244;}
+{\*\expandedcolortbl;;\cssrgb\c50196\c50196\c50196;\cssrgb\c12157\c12157\c12157;\cssrgb\c26667\c27843\c27451;
+\cssrgb\c91373\c93333\c96471;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat0\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat0\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid101\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid2}
+{\list\listtemplateid3\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat0\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid201\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid3}
+{\list\listtemplateid4\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat0\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid301\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid4}
+{\list\listtemplateid5\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat0\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid401\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid5}
+{\list\listtemplateid6\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat0\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid501\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid6}
+{\list\listtemplateid7\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat0\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid601\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid7}
+{\list\listtemplateid8\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat0\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid701\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid8}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}{\listoverride\listid4\listoverridecount0\ls4}{\listoverride\listid5\listoverridecount0\ls5}{\listoverride\listid6\listoverridecount0\ls6}{\listoverride\listid7\listoverridecount0\ls7}{\listoverride\listid8\listoverridecount0\ls8}}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs24 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 \
+\pard\pardeftab720\sa80\partightenfactor0
+
+\f1\b\fs28 \cf3 \strokec3 Step 1: The Foundation\
+\pard\pardeftab720\sa160\partightenfactor0
+
+\f0\b0\fs24 \cf3 The script immediately updates the Pi and installs every necessary core package.\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa160\partightenfactor0
+\ls1\ilvl0\cf3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec3 It purges \cf4 \cb5 \strokec4 modemmanager\cf3 \cb1 \strokec3  and \cf4 \cb5 \strokec4 brltty\cf3 \cb1 \strokec3  (these default Linux packages notoriously hijack USB serial ports and block Arduinos).\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec3 It downloads Python, FFmpeg (for video), Apache2 (for web routing), and the tunneling tools (Ngrok and FRP).\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec3 It grants your \cf4 \cb5 \strokec4 drone\cf3 \cb1 \strokec3  user absolute permission to access the GPIO pins and video hardware.\
+\pard\pardeftab720\partightenfactor0
+\cf2 \strokec2 \
+\pard\pardeftab720\sa80\partightenfactor0
+
+\f1\b\fs28 \cf3 \strokec3 Step 2: The Traffic Cop (Apache Reverse Proxy)\
+\pard\pardeftab720\sa160\partightenfactor0
+
+\f0\b0\fs24 \cf3 You have multiple Python scripts running on different network ports. If you tried to expose all of them through an internet tunnel, it would fail.\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa160\partightenfactor0
+\ls2\ilvl0\cf3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec3 Apache acts as the front door on standard Port \cf4 \cb5 \strokec4 80\cf3 \cb1 \strokec3 .\
+\ls2\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec3 When a command comes in, Apache looks at the URL and seamlessly forwards it to the correct hidden background script.\
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \tamarb640 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth1413\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clpadt240 \clpadl0 \clpadb240 \clpadr160 \gaph\cellx2880
+\clvertalc \clshdrawnil \clwWidth1494\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clpadt240 \clpadl0 \clpadb240 \clpadr160 \gaph\cellx5760
+\clvertalc \clshdrawnil \clwWidth6763\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clpadt240 \clpadl0 \clpadb240 \clpadr0 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f1\b \cf3 Internal Port
+\f0\b0 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f1\b \cf3 Service
+\f0\b0 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f1\b \cf3 What it Does
+\f0\b0 \cell \row
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \tamarb640 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth1413\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clpadt240 \clpadl0 \clpadb240 \clpadr160 \gaph\cellx2880
+\clvertalc \clshdrawnil \clwWidth1494\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clpadt240 \clpadl0 \clpadb240 \clpadr160 \gaph\cellx5760
+\clvertalc \clshdrawnil \clwWidth6763\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clpadt240 \clpadl0 \clpadb240 \clpadr0 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f1\b \cf3 80
+\f0\b0 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf3 Apache\cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf3 The Master Front Door. Tunnels only talk to this port.\cell \row
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \tamarb640 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth1413\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clpadt240 \clpadl0 \clpadb240 \clpadr160 \gaph\cellx2880
+\clvertalc \clshdrawnil \clwWidth1494\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clpadt240 \clpadl0 \clpadb240 \clpadr160 \gaph\cellx5760
+\clvertalc \clshdrawnil \clwWidth6763\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clpadt240 \clpadl0 \clpadb240 \clpadr0 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f1\b \cf3 8000
+\f0\b0 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf3 Master API\cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf3 Serves the HTML HUD, Wi-Fi scanning, and Pi settings.\cell \row
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \tamarb640 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth1413\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clpadt240 \clpadl0 \clpadb240 \clpadr160 \gaph\cellx2880
+\clvertalc \clshdrawnil \clwWidth1494\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clpadt240 \clpadl0 \clpadb240 \clpadr160 \gaph\cellx5760
+\clvertalc \clshdrawnil \clwWidth6763\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clpadt240 \clpadl0 \clpadb240 \clpadr0 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f1\b \cf3 8080
+\f0\b0 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf3 Drive Node\cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf3 Talks to the UNO, calculates battery sag, drives the motor.\cell \row
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \tamarb640 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth1413\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clpadt240 \clpadl0 \clpadb240 \clpadr160 \gaph\cellx2880
+\clvertalc \clshdrawnil \clwWidth1494\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clpadt240 \clpadl0 \clpadb240 \clpadr160 \gaph\cellx5760
+\clvertalc \clshdrawnil \clwWidth6763\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clpadt240 \clpadl0 \clpadb240 \clpadr0 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f1\b \cf3 8082
+\f0\b0 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf3 Steer Node\cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf3 Talks to the ESP8266, runs Failsafe and Anti-Rollover math.\cell \row
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \tamarb640 \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth1413\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clpadt240 \clpadl0 \clpadb240 \clpadr160 \gaph\cellx2880
+\clvertalc \clshdrawnil \clwWidth1494\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clpadt240 \clpadl0 \clpadb240 \clpadr160 \gaph\cellx5760
+\clvertalc \clshdrawnil \clwWidth6763\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clpadt240 \clpadl0 \clpadb240 \clpadr0 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f1\b \cf3 8889
+\f0\b0 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf3 Camera Node\cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf3 Streams the raw MJPEG video feed from the Logitech webcam.\cell \lastrow\row
+\pard\pardeftab720\partightenfactor0
+\cf2 \strokec2 \
+\pard\pardeftab720\sa80\partightenfactor0
+
+\f1\b\fs28 \cf3 \strokec3 Step 3: The Video Engine (\cf4 \cb5 \strokec4 camera.py\cf3 \cb1 \strokec3 )\
+\pard\pardeftab720\sa160\partightenfactor0
+
+\f0\b0\fs24 \cf3 This writes a lightweight Python script dedicated entirely to video.\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa160\partightenfactor0
+\ls3\ilvl0\cf3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec3 It uses \cf4 \cb5 \strokec4 ffmpeg\cf3 \cb1 \strokec3  to physically grab the \cf4 \cb5 \strokec4 /dev/video0\cf3 \cb1 \strokec3  hardware stream at 30 frames per second.\
+\ls3\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec3 It wraps the video frames in a standard HTTP multipart response so your web browser can view the live feed with practically zero latency.\
+\pard\pardeftab720\partightenfactor0
+\cf2 \strokec2 \
+\pard\pardeftab720\sa80\partightenfactor0
+
+\f1\b\fs28 \cf3 \strokec3 Steps 4-8: The Master Brain (\cf4 \cb5 \strokec4 pilot.py\cf3 \cb1 \strokec3 )\
+\pard\pardeftab720\sa160\partightenfactor0
+
+\f0\b0\fs24 \cf3 This is the core nervous system. It writes the massive Python script that acts as the bridge between your web browser and the physical microcontrollers.\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa160\partightenfactor0
+\ls4\ilvl0
+\f1\b \cf3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec3 Auto-Discovery:
+\f0\b0  It rapidly sweeps all USB ports, shouting \cf4 \cb5 \strokec4 PING_ID\cf3 \cb1 \strokec3  to find out which cable connects to the UNO and which connects to the ESP.\
+\ls4\ilvl0
+\f1\b \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec3 Multi-Threading:
+\f0\b0  It runs the GPS, the UNO drive logic, the ESP steering logic, and the web interface simultaneously on separate processor threads so a delay in the video doesn't crash the steering.\
+\ls4\ilvl0
+\f1\b \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec3 Privilege Escalation:
+\f0\b0  It contains the logic to seamlessly pipe your SSH root password (\cf4 \cb5 \strokec4 drone786@@\cf3 \cb1 \strokec3 ) directly into the Linux kernel to execute \cf4 \cb5 \strokec4 poweroff\cf3 \cb1 \strokec3  or \cf4 \cb5 \strokec4 reboot\cf3 \cb1 \strokec3  without prompting the user.\
+\pard\pardeftab720\partightenfactor0
+\cf2 \strokec2 \
+\pard\pardeftab720\sa80\partightenfactor0
+
+\f1\b\fs28 \cf3 \strokec3 Step 9: The Frontend (\cf4 \cb5 \strokec4 hud.html\cf3 \cb1 \strokec3 )\
+\pard\pardeftab720\sa160\partightenfactor0
+
+\f0\b0\fs24 \cf3 The script creates the \cf4 \cb5 \strokec4 templates\cf3 \cb1 \strokec3  folder and writes your entire HTML, CSS, and JavaScript interface.\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa160\partightenfactor0
+\ls5\ilvl0\cf3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec3 This file contains the dual-joystick math, the Leaflet mapping logic for the GPS, and all the settings modals.\
+\ls5\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec3 It constantly fetches \cf4 \cb5 \strokec4 /data\cf3 \cb1 \strokec3  from the Python backend to keep your battery, ping, and speed metrics perfectly synced in real-time.\
+\pard\pardeftab720\partightenfactor0
+\cf2 \strokec2 \
+\pard\pardeftab720\sa80\partightenfactor0
+
+\f1\b\fs28 \cf3 \strokec3 Steps 10.5 & 10.8: Network Failsafes\
+\pard\pardeftab720\sa160\partightenfactor0
+
+\f0\b0\fs24 \cf3 If you take the drone to an empty parking lot, it won't have Wi-Fi.\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa160\partightenfactor0
+\ls6\ilvl0
+\f1\b \cf4 \cb5 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 drone_ap.sh\cf3 \cb1 \strokec3 :
+\f0\b0  This script checks if the Pi is connected to the internet. If 50 seconds pass with no connection, it forces the Pi's internal Wi-Fi chip to broadcast its own network (\cf4 \cb5 \strokec4 DRONE_SETUP\cf3 \cb1 \strokec3 ).\
+\ls6\ilvl0
+\f1\b \cf4 \cb5 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 keepalive.sh\cf3 \cb1 \strokec3 :
+\f0\b0  Mobile phone hotspots often go to sleep if they don't see active traffic. This script pings Google every 3 seconds to keep the connection wide awake.\
+\pard\pardeftab720\partightenfactor0
+\cf2 \strokec2 \
+\pard\pardeftab720\sa80\partightenfactor0
+
+\f1\b\fs28 \cf3 \strokec3 Step 10: Tunnels & Automation\
+\pard\pardeftab720\sa160\partightenfactor0
+
+\f0\b0\fs24 \cf3 This configures how you access the drone from anywhere in the world.\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa160\partightenfactor0
+\ls7\ilvl0\cf3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec3 It configures \cf4 \cb5 \strokec4 msmtp\cf3 \cb1 \strokec3  so the drone can automatically send emails using your Gmail app password.\
+\ls7\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec3 It builds three separate launcher scripts (\cf4 \cb5 \strokec4 email_link.sh\cf3 \cb1 \strokec3 , \cf4 \cb5 \strokec4 ngrok_link.sh\cf3 \cb1 \strokec3 , \cf4 \cb5 \strokec4 frp_link.sh\cf3 \cb1 \strokec3 ). Depending on what you pick in the HUD, it boots the correct tunnel and reports the URL.\
+\pard\pardeftab720\partightenfactor0
+\cf2 \strokec2 \
+\pard\pardeftab720\sa80\partightenfactor0
+
+\f1\b\fs28 \cf3 \strokec3 Steps 11-13: Systemd & Final Optimization\
+\pard\pardeftab720\sa160\partightenfactor0
+
+\f0\b0\fs24 \cf3 The script locks everything into the Linux OS.\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa160\partightenfactor0
+\ls8\ilvl0\cf3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec3 It writes 7 different \cf4 \cb5 \strokec4 .service\cf3 \cb1 \strokec3  files. This tells the Linux kernel: 
+\f2\i "The moment this Pi receives power, automatically start the camera, the brain, the network fallbacks, and the tunnels in the background."
+\f0\i0 \
+\ls8\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec3 It issues \cf4 \cb5 \strokec4 systemctl set-default multi-user.target\cf3 \cb1 \strokec3 . This permanently kills the heavy Raspberry Pi Desktop (GUI). The Pi now boots in pure, raw terminal mode, dedicating 100% of its CPU and RAM directly to your code and video feed.\
+\ls8\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec3 Finally, it reboots the Pi to apply all changes.\
+\pard\pardeftab720\partightenfactor0
+\cf2 \strokec2 \
+\pard\pardeftab720\sa160\partightenfactor0
+\cf3 \strokec3 This script takes a blank piece of silicon and turns it into a highly specialized, self-healing robotics server. Are you ready to execute this on the Pi to finalize the build, or do you want to break down how the Python threading specifically communicates with the Arduinos?\
+}
